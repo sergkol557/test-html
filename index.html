@@ -1,9 +1,23 @@
-<!doctype html>
-<html>
-  <head>
-    <title>This is the title of the webpage!</title>
-  </head>
-  <body>
-    <p>This is an example paragraph. Anything in the <strong>body</strong> tag will appear on the page, just like this <strong>p</strong> tag and its contents.</p>
-  </body>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>AR in Web</title>
+</head>
+<body>
+	<script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	<a-scene embedded arjs>
+		<a-marker preset="hiro">
+			<a-entity
+				position="0 0 0"
+				scale="1 1 1"
+				gltf-model="/gold_fish/scene.gltf"
+			></a-entity>
+		</a-marker>
+		<a-entity camera></a-entity>
+	</a-scene>
+</body>
 </html>
